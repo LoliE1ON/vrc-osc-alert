@@ -8,7 +8,7 @@ setInterval(async () => {
     const status = await infrastructure.alerts.getStatus();
 
     domain.alert.setStatus(status);
-    api.alert.send(infrastructure.osc.client, domain.alert.status);
+    api.alert.sync(infrastructure.osc.client, domain.alert.status);
 
-    console.log(`Alert status ${status} [${new Date()}]`);
+    console.log(`Alert status: ${status} [${new Date()}]`);
 }, config.refreshRate);

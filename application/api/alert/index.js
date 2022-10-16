@@ -1,5 +1,5 @@
-import { send } from "./send.js";
+import { sync } from "./sync.js";
 
 export const alert = {
-    send,
+    sync,
 };

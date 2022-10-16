@@ -1,4 +1,4 @@
-export const send = (client, status) => {
+export const sync = (client, status) => {
     try {
         client.send({
             address: "/avatar/parameters/Alert",
