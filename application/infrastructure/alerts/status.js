@@ -15,7 +15,9 @@ export const getStatus = async () => {
         await browser.close();
 
         return Boolean(alert);
-    } catch (e) {
+    } catch (throwable) {
+        console.error(throwable);
+
         return false;
     }
 };
