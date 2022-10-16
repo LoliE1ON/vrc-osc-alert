@@ -1,0 +1,20 @@
+{
+    "name": "osc-red-alert",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node application/application.js"
+    },
+    "type": "module",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "osc": "^2.4.3",
+        "prettier": "^2.7.1"
+    },
+    "devDependencies": {
+        "puppeteer": "^19.0.0"
+    }
+}
