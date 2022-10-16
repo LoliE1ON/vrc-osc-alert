@@ -1,4 +1,4 @@
-import { alert } from "./alert.js";
+import { alert } from "./alert/alert.js";
 
 export const domain = {
     alert,
