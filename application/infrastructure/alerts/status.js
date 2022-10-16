@@ -9,7 +9,7 @@ export const getStatus = async () => {
         await page.waitForSelector(config.selector);
 
         const alert = await page.$eval(config.selector, element => {
-            return element.getAttribute("data-alert-type");
+            return element.getAttribute(config.attribute);
         });
 
         await browser.close();

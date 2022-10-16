@@ -2,5 +2,5 @@
     "url": "https://alerts.in.ua",
     "selector": "[data-oblast=\"Запорізька область\"]",
     "attribute": "data-alert-type",
-    "refreshRate": 20000
+    "refreshRate": 60000
 }

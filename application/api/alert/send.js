@@ -1,9 +1,9 @@
 export const send = (client, status) => {
     client.send({
-        address: "/test",
+        address: "/avatar/parameters/Alert",
         args: {
-            type: "f",
-            value: status,
+            type: "i",
+            value: Number(status),
         },
     });
 };
