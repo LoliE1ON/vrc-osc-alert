@@ -5,14 +5,15 @@ export const getStatus = async () => {
     try {
         const page = await browser.newPage();
 
-        await page.goto(config.url);
+        await page.goto(config.url, {
+            waitUntil: "networkidle0",
+        });
+
         await page.waitForSelector(config.selector);
 
         const alert = await page.$eval(config.selector, element => {
-            return element.getAttribute(config.attribute);
+            return element.getAttribute("data-alert-type");
         });
-
-        await browser.close();
 
         return Boolean(alert);
     } catch (throwable) {
