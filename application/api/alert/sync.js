@@ -1,7 +1,7 @@
 export const sync = (client, status) => {
     try {
         client.send({
-            address: "/avatar/parameters/Alert",
+            address: "/avatar/parameters/EnableAlert",
             args: {
                 type: "i",
                 value: Number(status),
