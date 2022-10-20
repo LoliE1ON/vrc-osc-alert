@@ -1,9 +1,11 @@
+import config from "../../config/animationParameters.json" assert { type: "json" };
+
 export const sync = (client, status) => {
     try {
         client.send({
-            address: "/avatar/parameters/EnableAlert",
+            address: config.alert.address,
             args: {
-                type: "i",
+                type: config.alert.type,
                 value: Number(status),
             },
         });

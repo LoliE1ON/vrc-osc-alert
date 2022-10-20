@@ -1,0 +1,6 @@
+{
+    "alert": {
+        "address": "/avatar/parameters/EnableAlert",
+        "type": "i"
+    }
+}
