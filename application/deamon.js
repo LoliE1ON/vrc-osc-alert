@@ -1,11 +1,10 @@
 import childProcess from "child_process";
 import config from "./config/deamon.json" assert { type: "json" };
 
-const exec = childProcess.exec;
 let process = null;
 
 const observer = () => {
-    exec("tasklist", function (err, stdout) {
+    childProcess.exec("tasklist", function (err, stdout) {
         if (stdout.includes(config.processName)) {
             !process && forkProcess();
         } else {
