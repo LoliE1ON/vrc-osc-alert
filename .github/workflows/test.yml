@@ -21,8 +21,8 @@ jobs:
               with:
                   repo_token: ${{ secrets.GITHUB_TOKEN }}
                   file: ./VRChatOSCAlerts.exe
-                  asset_name: VRChatOSCAlerts_v${{ env.NOW }}.exe
-                  release_name: Release v${{ env.NOW }}
-                  tag: v${{ env.NOW }}
+                  asset_name: "VRChatOSCAlerts_v${{ env.NOW }}.exe"
+                  release_name: "Release v${{ env.VERSION }}"
+                  tag: "v${{ env.VERSION }}"
                   overwrite: true
                   body: "test text"
