@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "tsc && node build/bootstrap.js",
-        "pkg": "tsc && pkg --public --debug build/bootstrap.js -o VRChatOSCAlerts"
+        "pkg": "tsc && pkg --public --debug build/bootstrap.js -o VRChatOSCAlerts -t win"
     },
     "keywords": [],
     "author": "",
