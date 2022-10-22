@@ -10,13 +10,22 @@ jobs:
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         steps:
+            - name: Init
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3
               with:
                   node-version: '16.x'
+
+            - name: Install dependencies
             - run: npm i
+
+            - name: Build application
             - run: npm run pkg
+
+            - name: Set version to ENV
             - run: echo "VERSION=$(date +'%Y.%m.%d.his')" >> $GITHUB_ENV
+
+            - name: Create release
             - uses: svenstaro/upload-release-action@v2
               with:
                   repo_token: ${{ secrets.GITHUB_TOKEN }}
