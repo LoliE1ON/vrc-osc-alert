@@ -1,6 +1,5 @@
 {
     "url": "https://alerts.in.ua",
-    "selector": "[data-oblast=\"Запорізька область\"]",
-    "attribute": "data-alert-type",
+    "selector": "data-oblast",
     "refreshRate": 10000
 }

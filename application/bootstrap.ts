@@ -27,4 +27,8 @@ const setIsNotRunning = () => {
 
 setInterval(observer, config.refreshRate);
 
+domain.alert.setRegion(`${process.argv[2] || ""} ${process.argv[3] || ""}`);
+
 console.log("Application is starting!");
+
+console.log(`Selected region: ${domain.alert.region}`);
