@@ -17,7 +17,6 @@ export const getStatus = async () => {
         });
 
         const selector = `[${config.selector}="${domain.alert.region}"]`;
-        console.log(selector);
         await page.waitForSelector(selector);
 
         const alert = await page.$eval(selector, element => {
