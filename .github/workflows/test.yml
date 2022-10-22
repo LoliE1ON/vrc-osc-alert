@@ -1,4 +1,9 @@
-name: Test
+name: Release
+
+on:
+    pull_request:
+        types:
+            - opened
 
 jobs:
     release:
