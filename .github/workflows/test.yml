@@ -1,9 +1,8 @@
 name: Release
 
 on:
-    pull_request:
-        types:
-            - opened
+    push:
+        branches: '**'
 
 jobs:
     release:
