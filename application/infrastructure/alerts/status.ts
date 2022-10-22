@@ -1,8 +1,14 @@
-import { browser } from "./browser.js";
-import config from "../../config/alerts.json" assert { type: "json" };
+import config from "../../config/alerts.json";
+import puppeteer from "puppeteer";
 
 export const getStatus = async () => {
     try {
+        const browser = await puppeteer.launch({
+            headless: true,
+            args: ["--no-sandbox", "--disable-setuid-sandbox"],
+            defaultViewport: { width: 800, height: 600 },
+        });
+
         const page = await browser.newPage();
 
         await page.goto(config.url, {

@@ -4,17 +4,20 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "node application/application.js"
+        "start": "tsc && node build/bootstrap.js",
+        "pkg": "tsc && pkg --public --debug build/bootstrap.js -o VRChatOSCAlerts"
     },
-    "type": "module",
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "osc": "^2.4.3",
-        "prettier": "^2.7.1"
+        "pkg": "^5.8.0",
+        "puppeteer": "^19.0.0"
     },
     "devDependencies": {
-        "puppeteer": "^19.0.0"
+        "puppeteer": "^19.0.0",
+        "typescript": "^4.8.4",
+        "prettier": "^2.7.1"
     }
 }

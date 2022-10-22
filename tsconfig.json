@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "./build",
+        "strict": false,
+        "target": "esnext",
+        "module": "commonjs",
+        "declaration": true,
+        "skipLibCheck": false,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true
+    },
+    "exclude": ["node_modules", "build"]
+}

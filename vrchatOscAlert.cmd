@@ -1,1 +1,0 @@
-node ./application/deamon.js

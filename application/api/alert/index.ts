@@ -1,4 +1,4 @@
-import { sync } from "./sync.js";
+import { sync } from "./sync";
 
 export const alert = {
     sync,

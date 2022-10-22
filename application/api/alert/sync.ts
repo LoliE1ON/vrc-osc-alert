@@ -1,4 +1,4 @@
-import config from "../../config/animationParameters.json" assert { type: "json" };
+import config from "../../config/animationParameters.json";
 
 export const sync = (client, status) => {
     try {
