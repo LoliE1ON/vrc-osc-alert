@@ -17,7 +17,7 @@ jobs:
             - run: npm i
             - run: npm run pkg
             - run: echo "VERSION=$(date +'%Y.%m.%d.his')" >> $GITHUB_ENV
-              uses: svenstaro/upload-release-action@v2
+            - uses: svenstaro/upload-release-action@v2
               with:
                   repo_token: ${{ secrets.GITHUB_TOKEN }}
                   file: ./VRChatOSCAlerts.exe
