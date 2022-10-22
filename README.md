@@ -8,7 +8,7 @@
 
 ## Avatar parameter
 Имя: EnableAlert<br>
-Тип: Bolean
+Тип: Bolean<br>
 Значения:
 - false - тревога отсуствует
 - true - тревога присуствует
