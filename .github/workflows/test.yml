@@ -14,7 +14,9 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: '16.x'
+            - name: Install dependencies
             - run: npm i
+            - name: Build application
             - run: npm run pkg
             - name: Set version
               run: echo "VERSION=$(date +'%Y.%m.%d.his')" >> $GITHUB_ENV
@@ -24,7 +26,7 @@ jobs:
                   repo_token: ${{ secrets.GITHUB_TOKEN }}
                   file: ./VRChatOSCAlerts.exe
                   asset_name: VRChatOSCAlerts.exe
-                  name: Release v${{ env.NOW }}
+                  release_name: Release v${{ env.NOW }}
                   tag: v${{ env.NOW }}
                   overwrite: true
                   body: "test text"
