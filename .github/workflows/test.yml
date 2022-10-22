@@ -16,13 +16,15 @@ jobs:
                   node-version: '16.x'
             - run: npm i
             - run: npm run pkg
-            - run: echo "VERSION=$(date +'%Y.%m.%d.his')" >> $GITHUB_ENV
+            - name: get-npm-version
+              id: package-version
+              uses: martinbeentjes/npm-get-version-action@main
             - uses: svenstaro/upload-release-action@v2
               with:
                   repo_token: ${{ secrets.GITHUB_TOKEN }}
                   file: ./VRChatOSCAlerts.exe
-                  asset_name: "VRChatOSCAlerts_v${{ env.NOW }}.exe"
-                  release_name: "Release v${{ env.VERSION }}"
-                  tag: "v${{ env.VERSION }}"
+                  asset_name: "VRChatOSCAlerts_v${{ steps.package-version.outputs.current-version}}.exe"
+                  release_name: "Release v${{ steps.package-version.outputs.current-version}}"
+                  tag: "v${{ steps.package-version.outputs.current-version}}"
                   overwrite: true
                   body: "test text"
