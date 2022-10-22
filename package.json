@@ -11,13 +11,14 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "node-hide-console-window": "^2.1.1",
         "osc": "^2.4.3",
         "pkg": "^5.8.0",
         "puppeteer": "^19.0.0"
     },
     "devDependencies": {
+        "prettier": "^2.7.1",
         "puppeteer": "^19.0.0",
-        "typescript": "^4.8.4",
-        "prettier": "^2.7.1"
+        "typescript": "^4.8.4"
     }
 }

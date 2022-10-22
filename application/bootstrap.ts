@@ -1,4 +1,5 @@
 import childProcess from "child_process";
+import { hideConsole } from "node-hide-console-window";
 import config from "./config/deamon.json";
 import { domain } from "./domain";
 import { application } from "./application";
@@ -32,3 +33,7 @@ domain.alert.setRegion(`${process.argv[2] || ""} ${process.argv[3] || ""}`);
 console.log("Application is starting!");
 
 console.log(`Selected region: ${domain.alert.region}`);
+
+setTimeout(() => {
+    hideConsole();
+}, 2000);
