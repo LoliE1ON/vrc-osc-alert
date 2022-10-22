@@ -1,4 +1,5 @@
 import config from "../../config/alerts.json";
+import { domain } from "../../domain";
 import puppeteer from "puppeteer";
 
 export const getStatus = async () => {
@@ -15,9 +16,11 @@ export const getStatus = async () => {
             waitUntil: "networkidle0",
         });
 
-        await page.waitForSelector(config.selector);
+        const selector = `[${config.selector}="${domain.alert.region}"]`;
+        console.log(selector);
+        await page.waitForSelector(selector);
 
-        const alert = await page.$eval(config.selector, element => {
+        const alert = await page.$eval(selector, element => {
             return element.getAttribute("data-alert-type");
         });
 
