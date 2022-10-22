@@ -6,7 +6,7 @@ export const sync = (client, status) => {
             address: config.alert.address,
             args: {
                 type: config.alert.type,
-                value: Number(status),
+                value: Boolean(status),
             },
         });
     } catch (throwable) {

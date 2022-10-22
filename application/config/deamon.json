@@ -1,5 +1,5 @@
 {
     "processName": "VRChat.exe",
-    "refreshRate": 60000,
+    "refreshRate": 30000,
     "scriptPath": "./application/application.js"
 }
